@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  --primary-color: rgb(179, 3, 120);
+  --primary-color-lighter: rgb(253, 221, 227);
+  --secondary-color: rgb(33, 214, 214);
+  --side-padding: 3rem;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.top-bar {
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  padding: 5px 20px;
+
+  background-color: var(--secondary-color);
+}
+
+.top-bar .main-title {
+  padding-top: 10px;
+  color: white;
+}
+
+.top-bar nav {
+  display: grid;
+  align-content: center;
+  justify-content: right;
+}
+
+.top-bar ul {
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 10px;
+}
+
+.top-bar li {
+  display: inline;
+}
+
+.top-bar a {
+  background-color: #ffffffee;
+  padding: 3px 7px;
+  border-radius: 3px;
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.title-question {
+  background-color: var(--secondary-color);
+  text-align: center;
+  color: white;
+}
+
+.title-question h2 {
+  font-size: 3rem;
+}
+
+.main {
+  display: grid;
+  grid-template:
+    ". content ." 1fr /
+    1fr 55ch 1fr;
+}
+
+.title-question content {
+  grid-area: content;
+  text-align: justify;
+}
+
+html {
+  font-size: 16px;
+}
+
+strong {
+  color: rgb(0, 0, 0);
+}
+
+em {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+.about-me {
+  display: grid;
+  grid-template-areas: ". about-me-content .";
+  grid-template-columns: 1fr 72ch 1fr;
+
+  background-color: #f3efdd;
+}
+
+.about-me .about-me-content {
+  grid-area: about-me-content;
+
+  margin: 50px 0px;
+
+  color: #24292e;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.about-me .about-me-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.about-me .about-me-content h3 {
+  margin-top: 30px;
+}
+
+.about-me .about-me-content p,
+.about-me .about-me-content ul {
+  line-height: 1.5;
+
+  margin-top: 10px;
+}
+
+.about-me .about-me-content ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  margin-left: 40px;
+}
+
+.portfolio {
+  background-color: var(--primary-color-lighter);
+
+  padding: 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+
+  text-transform: uppercase;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  grid-gap: 10px;
+  padding: 0 var(--side-padding);
+}
+
+.project {
+  border: solid 5px var(--primary-color);
+  border-radius: 5px;
+
+  padding: 20px;
+  background-color: white;
+
+  display: grid;
+  grid-template-rows: 30px 1fr 30px 20px;
+  grid-gap: 10px;
+}
+
+.project .project-title {
+  font-size: 1.5rem;
+
+  display: grid;
+  align-content: center;
+}
+
+.project .read-more {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+
+  display: grid;
+  place-items: center;
+
+  text-decoration: none;
+}
+
+.project .github-repo {
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.experience h2 {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(31, 55, 99);
+  color: white;
+  padding: 20px;
+}
+
+.experience {
+  display: grid;
+  grid-template-areas: ". experience-content .";
+  grid-template-columns: 1fr 72ch 1fr;
+
+  background-color: #ecebe7;
+}
+
+.experience .experience-content {
+  grid-area: experience-content;
+
+  color: #24292e;
+  font-size: 1.3rem;
+
+  margin: 50px 0px;
+}
+
+.experience .experience-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.5rem;
+
+  margin-bottom: 30px;
+}
+
+.experience .experience-content h3 {
+  font-weight: 600;
+
+  margin: 10px 0px;
+}
+
+.experience .experience-content p {
+  font-weight: 500;
+  line-height: 1.2;
+
+  margin-bottom: 30px;
+}
